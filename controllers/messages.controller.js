@@ -1,5 +1,9 @@
+const path = require('path');
+
 function getMessages(req, res) {
-  res.send('<ul><li>Hello World!</li></ul>');
+  const filePath = path.join(__dirname, '..', 'public', 'openai.webp');
+  res.sendFile(filePath);
+  //   res.send('<ul><li>Hello World!</li></ul>');
 }
 
 function postMessage(req, res) {
